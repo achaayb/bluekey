@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Crypters</title>
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item active">crypters</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header">crypters</div>
+            <div class="card-body">
+                <div class="card mb-4">
+                    <div class="card-header">New Crypter</div>
+                    <div class="card-body">
+                        <form action="/crypters/" method="POST" id="product_form">
+
+                            <div class="form-group">
+                                <label for="product_name" class="col-form-label">Product Name</label>
+                                <input type="text" name="product_name" id="product_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="product_image_raw" class="col-form-label">Product Image</label>
+                                <input type="file" id="product_image_raw">
+                              </div>
+
+                            <div class="form-group">
+                                <label for="image_preview" class="col-form-label">Product Image Preview</label>
+                                <img width="50px" height="50px" src="" alt="" id="image_preview">
+                            </div>
+
+                            <input type="hidden" name="product_image" id="product_image">
+
+                            <div class="form-group">
+                                <label for="product_description" class="col-form-label">Product Description</label>
+                                <input type="text" name="product_description" id="product_description">
+                            </div>
+
+                            <input type="submit" id="submitProduct" value="Add Product" class="btn btn-primary">
+                        </form>
+                        <script>
+                            const input = document.getElementById("product_image_raw");
+                            const avatar = document.getElementById("image_preview");
+                            const img_value = document.getElementById("product_image");
+
+                            const convertBase64 = (file) => {
+                                return new Promise((resolve, reject) => {
+                                    const fileReader = new FileReader();
+                                    fileReader.readAsDataURL(file);
+
+                                    fileReader.onload = () => {
+                                        resolve(fileReader.result);
+                                    };
+
+                                    fileReader.onerror = (error) => {
+                                        reject(error);
+                                    };
+                                });
+                            };
+
+                            const uploadImage = async (event) => {
+                                const file = event.target.files[0];
+                                const base64 = await convertBase64(file);
+                                avatar.src = base64;
+                                img_value.value = base64;
+                            };
+
+                            input.addEventListener("change", (e) => {
+                                uploadImage(e);
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table mr-1"></i>
+                    remotes Table
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        {% if remotes|length < 1 %}
+                        <h4>There are no remotes, add one above</h4>
+                        {% else %}
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Product Name</th>
+                                    <th>Product Image</th>
+                                    <th>Product Description</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Product Name</th>
+                                    <th>Product Image</th>
+                                    <th>Product Description</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                {% for product in crypters %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.product_name }}</td>
+                                    <td><img width="100px" height="100px" src="{{ product.product_image }}"></td>
+                                    <td><p>{{ product.product_description }}</p></td>
+                                    <td>{{ product.date_created.date() }}</td>
+                                    <td>
+                                        <a href="/delete-remote/{{ product.id }}">Delete</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% endif %}
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
