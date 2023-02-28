@@ -1,0 +1,137 @@
+{% extends "Order/layout.html" %}
+{% block silent %}
+<div class="py-4  m-b-24">
+    <div class="container p-4  m-b-24 ">
+    </div>
+</div>
+<div class="main-body ">
+    <div class="container">
+        <div class="main-grid row">
+                                    <div class="main-header col-md-9 pull-md-right">
+                    <div class="header-lined ">
+                                                <h1>
+        Silent Office Exploit 
+    </h1>
+                                                    </div>
+                </div>
+                                
+    
+
+
+<script type="text/javascript" src="{{url_for('static',filename='templates/orderforms/lagom/js/order.min.js')}}"></script>
+
+<div class="col-md-3 pull-md-left main-sidebar sidebar hidden-xs hidden-sm">
+<div menuItemName="Categories" class="panel panel-sidebar">
+<div class="panel-heading">
+<h3 class="panel-title">
+                        <i class="fas fa-shopping-cart"></i>&nbsp;
+
+Category
+
+
+<i class="fa fa-chevron-up panel-minimise pull-right"></i>
+</h3>
+</div>
+
+
+        <div class="list-group">
+                                                    <a menuItemName="Silent Office Exploit" href="{{url_for('silent')}}" class="list-group-item" id="Secondary_Sidebar-Categories-Silent_Office_Exploit">
+                                                <i class="ls ls-box"></i>
+            
+            Silent Office Exploit
+
+                                        </a>
+                                                                            <a menuItemName="Crypters" href="{{url_for('crypters')}}" class="list-group-item" id="Secondary_Sidebar-Categories-Crypters">
+                                                <i class="ls ls-box"></i>
+            
+            Crypters
+
+                                        </a>
+
+                                                                            <a menuItemName="Remote Administrator Tool" href="{{url_for('remote')}}" class="list-group-item active" id="Secondary_Sidebar-Categories-Remote_Administrator_Tool">
+                                                <i class="ls ls-box"></i>
+            
+            Remote Administrator Tool
+
+                                        </a>
+
+                                        </div>
+
+</div>
+
+
+</div>
+<div class="main-content col-md-9 pull-md-right">
+
+<div class="categories-collapsed visible-xs visible-sm clearfix">
+            <div class="pull-left form-inline">
+    <div class="dropdown">
+        <a href="cart.php%3Fa=confproduct&amp;i=15&amp;language=ukranian.html#" data-toggle="dropdown" class="btn btn-default">
+                                    Silent Office Exploit
+                                <i class="ls ls-caret"></i>
+        </a>
+        <ul class="dropdown-menu ps">
+            <li class="dropdown-title h6">Category</li>
+                                                                            <li>
+<a menuItemName="Silent Office Exploit" href="{{url_for('silent')}}" class="" id="Secondary_Sidebar-Categories-Silent_Office_Exploit">
+Office Exploits
+</a>
+</li>
+                                                                                    <li>
+<a menuItemName="Crypters" href="{{url_for('crypters')}}" class=" active" id="Secondary_Sidebar-Categories-Crypters">
+Crypters
+</a>
+</li>
+                                                                         
+                                                                                    <li>
+<a menuItemName="Remote Administrator Tool" href="{{url_for('remote')}}" class="" id="Secondary_Sidebar-Categories-Remote_Administrator_Tool">
+Remote Administrator Tool
+</a>
+</li>
+
+
+</ul>                                                                                                                                        </ul>
+    </div>
+</div>
+        </div>
+        <div class="products" id="products">
+            
+    <div class="row row-eq-height row-eq-height-sm">
+                            {% for product in exploits %}
+                            <div class="col-lg-4 col-sm-6 ">
+                                
+                <div class="package " id="product1">
+                                                <h3 class="package-name">{{product.id}}</h3>
+                    <div class="package-price">
+                                                                                                                                        <div class="price ">{{product.price}} $</div>
+                                                                                                                            </div>
+                                                                                <div class="package-content">
+                            <p><b><h4>{{product.product_name}}</h4></b><br />
+<li>{{product.product_description}}</li><br />
+<li>{{ product.date_created.date() }}</li><br />
+
+</ul></h5><br />
+</p>
+                        </div>
+                                                <div class="package-footer">
+                        <a href="cart.php%3Fa=add&amp;pid=2.html" class="btn btn-lg btn-primary" id="product1-order-button">
+                            Замовити зараз
+                        </a>
+                                                    </div>
+                                                                             
+                </div>
+                
+                            </div>
+                            {% endfor %}
+
+                
+            </div>
+                    </div>
+</div>
+    </div>
+
+
+</div>
+</div>
+</div>      
+{% endblock silent%}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Portal Home - SilentExploits</title>
+    <link rel="shortcut icon" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon.ico')}}">
+
+    <link rel="icon" sizes="16x16 32x32 64x64" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon.ico')}}">
+    <link rel="icon" type="image/png" sizes="196x196" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-192.png')}}">
+    <link rel="icon" type="image/png" sizes="160x160" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-160.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-96.png')}}}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-64.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-16.png')}}">
+    <link rel="apple-touch-icon" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-57.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-114.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-72.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-144.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-60.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-120.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-76.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-152.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static',filename='templates/lagom/assets/img/favicons/favicon-180.png')}}">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/Order/templates/lagom/assets/img/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="/Order/templates/lagom/assets/img/favicons/browserconfig.xml">
+
+    <link href="{{url_for('static',filename='templates/lagom/core/styles/futuristic/assets/css/theme.css?v=1.6.0.css')}}" rel="stylesheet" class="lagom-style">
+    <link href="{{url_for('static',filename='templates/lagom/core/styles/futuristic/assets/css/site.css?v=1.6.0.css')}}" rel="stylesheet" class="lagom-style">
+    <link href="{{url_for('static',filename='templates/lagom/core/styles/futuristic/assets/css/futuristic-custom.css?v=1.6.0.css')}}" rel="stylesheet" class="lagom-style">
+                                                
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+    var csrfToken = 'fd5b0ba15021494f97b2d503aee2f6d03f045518',
+        markdownGuide = 'Markdown Guide'
+        locale = 'en',
+        saved = 'saved',
+        saving = 'autosaving',
+        whmcsBaseUrl = "/Order",
+        requiredText = 'Required',
+        recaptchaSiteKey = "6Lff7O8UAAAAAMY7mLkBcIiQFZ7BDchuAIn32Y-R";
+</script>
+<script src="{{url_for('static',filename='templates/lagom/assets/js/scripts.min.js?v=1.6.0')}}"></script>
+<script src="{{url_for('static',filename='templates/lagom/assets/js/core.min.js?v=1.6.0')}}"></script>
+
+
+
+
+    <!-- Chatstack - https://www.chatstack.com - Copyright - All Rights Reserved //-->
+<!--  BEGIN Chatstack - https://www.chatstack.com - Copyright - NOT PERMITTED TO MODIFY COPYRIGHT LINE / LINK //-->
+<script type="text/javascript">
+<!--
+var Chatstack = {};
+Chatstack.server = 'www.silentexploits.com/Order/modules/';
+Chatstack.embedded = true;
+Chatstack.locale = 'en';
+Chatstack.plugin = 'WHMCS';
+Chatstack.name = '';
+Chatstack.email = '';
+(function(d, $, undefined) {
+    $(window).ready(function() {
+        Chatstack.e = []; Chatstack.ready = function (c) { Chatstack.e.push(c); }
+        Chatstack.server = Chatstack.server.replace(/[a-z][a-z0-9+\-.]*:\/\/|\/livehelp\/*(\/|[a-z0-9\-._~%!$&'()*+,;=:@\/]*(?![a-z0-9\-._~%!$&'()*+,;=:@]))|\/*$/g, '');
+        var b = document.createElement('script'); b.type = 'text/javascript'; b.async = true;
+        b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + Chatstack.server + '/livehelp/scripts/js.min.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(b, s);
+    });
+})(document, jQuery);
+-->
+</script>
+<!--  END Chatstack - https://www.chatstack.com - Copyright - NOT PERMITTED TO MODIFY COPYRIGHT LINE / LINK //-->
+
+
+<!-- Dynamic Template Compatibility -->
+<!-- Please update your theme to include or have a comment on the following to negate dynamic inclusion -->
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/fontawesome-all.min.css')}}" />
+
+</head>
+<body class="lagom page-with-banner lagom-not-portal lagom-layout-left-wide page-homepage" data-phone-cc-input="1">
+    
+                
+
+
+<div class="app-nav hidden-print">
+    <section id="header">
+        <div class="container">
+            <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                                                           <a href="{{url_for('home')}}" class="logo hidden-sm hidden-xs"><img src="{{url_for('static',filename='templates/lagom/assets/img/logo/logo_big_inverse.png')}}" alt="SilentExploits"/></a>
+                                                <a href="{{url_for('home')}}" class="logo visible-xs visible-sm"><img src="{{url_for('static',filename='templates/lagom/assets/img/logo/logo_big_inverse.png')}}" alt="SilentExploits"/></a>
+                                                        
+
+        </div>
+    </section>
+        <section id="main-menu">
+    <nav id="nav" class="navbar navbar-default navbar-main " role="navigation" data-main-menu>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                Menu
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse" id="primary-nav">
+                <ul class="nav navbar-nav" data-nav>
+                        
+
+        <li menuItemName="Store" class="dropdown  " id="Primary_Navbar-Store">
+        <a class="dropdown-toggle"  href="{{url_for('home')}}">
+                                <i class="fas fa-ticket lm lm-basket"></i>
+                                                <span>Store</span>
+                                            
+            <b class="ls ls-caret"></b>               
+        </a>
+                        <ul class="dropdown-menu " >
+                                        <li class="dropdown-header">Store</li>
+
+                                        <li menuItemName="Shop Divider 1" 
+                        class="nav-divider " 
+                        id="Primary_Navbar-Store-Shop_Divider_1">
+                        <a href="{{url_for('home')}}">
+                                                            <div class="dropdown-menu-item-name">-----</div>
+                                                                                        </a>
+                    </li>
+                                        <li menuItemName="Silent Office Exploit" 
+                        class=" " 
+                        id="Primary_Navbar-Store-Silent_Office_Exploit">
+                        <a href="{{url_for('silent')}}">
+                                                            <div class="dropdown-menu-item-name">Silent Office Exploit</div>
+                                                                                        </a>
+                    </li>
+                                        <li menuItemName="Crypters" 
+                        class=" " 
+                        id="Primary_Navbar-Store-Crypters">
+                        <a href="{{url_for('crypters')}}">
+                                                            <div class="dropdown-menu-item-name">Crypters</div>
+                                                                                        </a>
+                    </li>
+
+                                        <li menuItemName="Remote Administrator Tool" 
+                        class=" " 
+                        id="Primary_Navbar-Store-Remote_Administrator_Tool">
+                        <a href="{{url_for('remote')}}">
+                                                            <div class="dropdown-menu-item-name">Remote Administrator Tool</div>
+                                                                                        </a>
+                    </li>
+
+                                </ul>
+          
+                    </ul>
+                
+        </div>
+    </nav>
+</section>
+</div>
+
+<div class="app-main ">
+    {% block silent %}
+    {% endblock silent %}
+    {% block remote %}
+    {% endblock remote %}
+    {% block crypters %}
+    {% endblock crypters %}
+        
+    <div class="site site-index site-index-default">
+        {% block home %}
+        {% endblock home %}
+        
+
+      
+        
+                </div>   
+
+<p style="text-align:center;">Powered by <a href="#" target="_blank">Blue Key</a></p>
+                                    <div class="main-footer hidden-print">
+                <div class="container"> 
+                    <div class="footer-content">                       
+                        <p>Copyright &copy; 2023 Blue Key. All Rights Reserved.</p> 
+                                                        <ul class="footer-links">
+                                    <li class="dropdown language" data-language-select>
+
+</li>
+             
+                            </ul>
+                                                </div>
+                    <div class="footer-actions">                           
+                        <a href="{{url_for('home')}}" class="back-to-top btn btn-sm btn-icon"><i class="lm lm-go-top"></i></a>
+                    </div>
+                </div>
+            </div>
+                        
+    <div id="fullpage-overlay" class="hidden">
+        <div class="outer-wrapper">
+            <div class="inner-wrapper">
+                <img src="{{url_for('static',filename='assets/img/overlay-spinner.svg')}}">
+                <br>
+                <span class="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal system-modal fade" id="modalAjax" tabindex="-1" role="dialog" aria-hidden="true" style="display: none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="lm lm-close"></i></button>
+                    <h3 class="modal-title"></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="loader">
+                         
+<div class="spinner ">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+</div>
+                         </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-submit">
+                        Submit
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+        
+
+<script type="text/javascript">
+var __lc = {};
+__lc.license = 10677232;
+
+(function() {
+var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+
+<div class="overlay"></div>
+<script src="{{url_for('static',filename='templates/lagom/assets/js/vendor.js?v=1.6.0')}}"></script>
+
+<script src="{{url_for('static',filename='templates/lagom/assets/js/lagom-app.js?v=1.6.0')}}"></script>
+<script src="{{url_for('static',filename='templates/lagom/assets/js/whmcs-custom.min.js?v=1.6.0')}}"></script>
+</body>
+</html>
