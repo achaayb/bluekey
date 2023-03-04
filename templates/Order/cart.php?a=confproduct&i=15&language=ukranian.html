@@ -35,26 +35,25 @@ Category
 
 
         <div class="list-group">
-                                                    <a menuItemName="Silent Office Exploit" href="{{url_for('silent')}}" class="list-group-item" id="Secondary_Sidebar-Categories-Silent_Office_Exploit">
-                                                <i class="ls ls-box"></i>
-            
-            Silent Office Exploit
-
-                                        </a>
-                                                                            <a menuItemName="Crypters" href="{{url_for('crypters')}}" class="list-group-item" id="Secondary_Sidebar-Categories-Crypters">
-                                                <i class="ls ls-box"></i>
-            
-            Crypters
-
-                                        </a>
-
-                                                                            <a menuItemName="Remote Administrator Tool" href="{{url_for('remote')}}" class="list-group-item active" id="Secondary_Sidebar-Categories-Remote_Administrator_Tool">
-                                                <i class="ls ls-box"></i>
-            
-            Remote Administrator Tool
-
-                                        </a>
-
+            <a menuItemName="Silent Office Exploit" href="{{url_for('silent')}}" class="{{'list-group-item active' if active_tab=='silent' else 'list-group-item'}}" id="Secondary_Sidebar-Categories-Silent_Office_Exploit">
+                <i class="ls ls-box"></i>
+                
+                Silent Office Exploit
+                
+                </a>
+                                            <a menuItemName="Crypters" href="{{url_for('crypters')}}" class="{{'list-group-item active' if active_tab=='crypters' else 'list-group-item'}}" id="Secondary_Sidebar-Categories-Crypters">
+                <i class="ls ls-box"></i>
+                
+                Crypters
+                
+                </a>
+                
+                                            <a menuItemName="Remote Administrator Tool" href="{{url_for('remote')}}" class="{{'list-group-item active' if active_tab=='remote' else 'list-group-item'}}" id="Secondary_Sidebar-Categories-Remote_Administrator_Tool">
+                <i class="ls ls-box"></i>
+                
+                Remote Administrator Tool
+                
+                </a>
                                         </div>
 
 </div>
@@ -108,14 +107,14 @@ Remote Administrator Tool
                                                                                 <div class="package-content">
                             <p><b><h4>{{product.product_name}}</h4></b><br />
 <li>{{product.product_description}}</li><br />
-<li>{{ product.date_created.date() }}</li><br />
+
 
 </ul></h5><br />
 </p>
                         </div>
                                                 <div class="package-footer">
                         <a href="cart.php%3Fa=add&amp;pid=2.html" class="btn btn-lg btn-primary" id="product1-order-button">
-                            Замовити зараз
+                            Order Now
                         </a>
                                                     </div>
                                                                              

@@ -171,27 +171,28 @@ def deleteRemote(name):
 
 #################### Order
 
-@app.route('/order/')
+@app.route('/')
+@app.route('/order')
 @app.route('/order/home')
 def home():
-    return render_template('Order/index.html')
+    return render_template('Order/index.html',active_tab='home')
 
 @app.route('/order/crypters')
 def crypters():
     crypters = Crypters.query.order_by(Crypters.date_created).all()
-    return render_template('Order/index.php?rp=%2Fstore%2Fcrypters.html',crypters=crypters)
+    return render_template('Order/index.php?rp=%2Fstore%2Fcrypters.html',crypters=crypters,active_tab='crypters')
 
 @app.route('/order/silent office')
 def silent():
     exploits = Exploits.query.order_by(Exploits.date_created).all()
-    return render_template('Order/cart.php?a=confproduct&i=15&language=ukranian.html',exploits=exploits)
+    return render_template('Order/cart.php?a=confproduct&i=15&language=ukranian.html',exploits=exploits,active_tab='silent')
 
 
 @app.route('/order/remote administrator')
 def remote():
     
     remotes = Remotes.query.order_by(Remotes.date_created).all()
-    return render_template('Order/index.php?rp=%2Fstore%2Fremote-administrator-tool.html',remotes=remotes)
+    return render_template('Order/index.php?rp=%2Fstore%2Fremote-administrator-tool.html',remotes=remotes,active_tab='remote')
 
 
 
